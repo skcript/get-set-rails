@@ -2,6 +2,8 @@
 
 A simple bash script to take setup you machine to run Ruby on Rails the right way.
 
+### Note: This project is not production ready yet.
+
 ## Supported Platforms
 - Ubuntu
 - Mac OS X (Coming soon)
@@ -9,7 +11,7 @@ A simple bash script to take setup you machine to run Ruby on Rails the right wa
 ## What it installs
 
 - [RVM](https://rvm.io/rvm/install)
-- Ruby 2.1.3p242
+- Ruby 2.1.5
 - Essential dependencies [SQLite, MySQL]
 - [Bundler 1.9](http://bundler.io)
 - nginx (Coming soon)
