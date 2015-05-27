@@ -11,13 +11,15 @@ A simple bash script to take setup you machine to run Ruby on Rails the right wa
 - [RVM](https://rvm.io/rvm/install)
 - Ruby 2.1.3p242
 - Essential dependencies [SQLite, MySQL]
-- Bundler
+- [Bundler 1.9](http://bundler.io)
 - nginx (Coming soon)
 - Git Core
 
 You have a choice to install Ruby from source or from RVM.
 
-## 
+## Usage
+
+
 
 ## TBD
 
