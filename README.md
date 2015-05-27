@@ -19,8 +19,6 @@ You have a choice to install Ruby from source or from RVM.
 
 ## Usage
 
-
-
 ## TBD
 
 - Install Passenger as Debian Package
