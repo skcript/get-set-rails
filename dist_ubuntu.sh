@@ -21,7 +21,7 @@ ruby_version_string=$2
 ruby_source_url=$3
 ruby_source_tar_name=$4
 ruby_source_dir_name=$5
-whichRuby=$6 # 1=source 2=RVM
+installType=$6 # 1=source 2=RVM
 script_runner=$(whoami)
 getsetrails_path=$7
 log_file=$8

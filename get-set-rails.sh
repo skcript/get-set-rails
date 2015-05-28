@@ -110,7 +110,7 @@ fi
 echo -e "\n==> Done performing setup operations for your Ubuntu system... Moving ahead..."
 
 # Now that initial commands are done, let us help the user execute his desired task
-if [ $whichRuby -eq 1 ] ; then
+if [ $installType -eq 1 ] ; then
   # Installing Ruby from Source
   echo -e "\n=> Fetching Ruby $ruby_version_string from Satellite... \n"
   cd $getsetrails_path/src && wget $ruby_source_url
@@ -123,7 +123,7 @@ if [ $whichRuby -eq 1 ] ; then
    && make >> $log_file 2>&1 \
     && sudo make install >> $log_file 2>&1
   echo "==> Completed Successfully..."
-elif [ $whichRuby -eq 2 ] ; then
+elif [ $installType -eq 2 ] ; then
   # Installing Ruby with RVM
   echo -e "\n=> Installing RVM for you. One of the best thing that has happened to the Ruby community... \n"
   \curl -L https://get.rvm.io | bash >> $log_file 2>&1
@@ -168,22 +168,22 @@ fi
 echo "==> Done sourcing..."
 
 echo -e "\n=> Setting up Ruby Gems without Documentation..."
-if [ $whichRuby -eq 1 ] ; then
+if [ $installType -eq 1 ] ; then
   sudo gem update --system --no-ri --no-rdoc >> $log_file 2>&1
-elif [ $whichRuby -eq 2 ] ; then
+elif [ $installType -eq 2 ] ; then
   gem update --system --no-ri --no-rdoc >> $log_file 2>&1
-elif [ $whichRuby -eq 3 ] ; then
+elif [ $installType -eq 3 ] ; then
   gem update --system --no-ri --no-rdoc >> $log_file 2>&1
 fi
 echo "==> Done updating Ruby Gems..."
 # Install all the dependencies for Rails 
 # TODO: Add the ability to install MySQL from here including libmysql-dev
 echo -e "\n=> Installing Dependencies. Passenger and Rails for now..."
-if [ $whichRuby -eq 1 ] ; then
+if [ $installType -eq 1 ] ; then
   sudo gem install bundler passenger rails --no-ri --no-rdoc -f >> $log_file 2>&1
-elif [ $whichRuby -eq 2 ] ; then
+elif [ $installType -eq 2 ] ; then
   gem install bundler passenger rails --no-ri --no-rdoc -f >> $log_file 2>&1
-elif [ $whichRuby -eq 3 ] ; then
+elif [ $installType -eq 3 ] ; then
   gem install bundler passenger rails --no-ri --no-rdoc -f >> $log_file 2>&1
 fi
 echo "==> Done installing Passenger and Rails..."
