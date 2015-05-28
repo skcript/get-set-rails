@@ -64,7 +64,7 @@ echo "Please run tail -f $log_file in a new terminal to check what installation 
 # Give users some more information before the installation begins
 echo -e "\n"
 echo "What are we trying to install here:"
-echo " * Ruby versio $ruby_version_string"
+echo " * Ruby version $ruby_version_string"
 echo " * Essential dependencies like SQLite, MySQL"
 echo " * Latest version of Bundler"
 echo " * Rubygems with Passenger"
@@ -105,7 +105,7 @@ echo -e "\n=> Fetching and running recipe for $distro via satellite...\n"
 # Download only Ubuntu specific installation files
 # Found out that Rails Ready people have this amazing way to do it. Following their footsteps
 if [[ $system_os = *linux* ]] ; then
-  wget --no-check-certificate -O $getsetrails_path/src/dist_ubuntu.sh https://raw.githubusercontent.com/joshfng/railsready/master/dist_ubuntu.sh && cd $getsetrails_path/src && bash dist_ubuntu.sh $ruby_version $ruby_version_string $ruby_source_url $ruby_source_tar_name $ruby_source_dir_name $whichRuby $getsetrails_path $log_file
+  wget --no-check-certificate -O $getsetrails_path/src/dist_ubuntu.sh https://github.com/skcript/get-set-rails/raw/master/dist_ubuntu.sh && cd $getsetrails_path/src && bash dist_ubuntu.sh $ruby_version $ruby_version_string $ruby_source_url $ruby_source_tar_name $ruby_source_dir_name $whichRuby $getsetrails_path $log_file
 fi
 echo -e "\n==> Done performing setup operations for your Ubuntu system... Moving ahead..."
 
