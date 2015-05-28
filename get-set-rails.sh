@@ -28,13 +28,13 @@ ruby_source_dir_name="ruby-2.1.5"
 which_user=$(whoami)
 getsetrails_path=$(cd && pwd)/getsetrails
 log_file="$getsetrails_path/rails_install.log"
-system_os=`uname | env LANG=C LC_ALL=C LC_CTYPE=C tr '[:upper:]' '[:lower:]'`
+system_os=$(uname | env LANG=C LC_ALL=C LC_CTYPE=C tr '[:upper:]' '[:lower:]')
 
 ctrl_c()
 {
   echo -en "\n\n========== Exiting ==========\n\n"
   exit 1
-}-
+}
 
 # 2. Handle Ctrl+C feedback
 trap ctrl_c SIGINT
