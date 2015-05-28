@@ -51,7 +51,7 @@ redistributed under the terms specified in the [LICENSE] file.
 About
 -----
 
-![Skcript](http://www.skcript.com/static/skcript_black.png)
+![Skcript](www.skcript.com/static/skcript_norm.png)
 
 Get. Set. Rails. is maintained and funded by Skcript. The names and logos for
 Skcript are properties of Skcript.
