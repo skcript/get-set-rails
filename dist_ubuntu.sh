@@ -37,21 +37,14 @@ echo -e "\nCurrently using $pm for package installation...\n"
 
 # Install all the damn dependencies
 echo -e "\n=> Installing build tools and other dependencies..."
-sudo $pm -y install \
-    wget curl build-essential clang \
-    bison openssl zlib1g \
-    libxslt1.1 libssl-dev libxslt1-dev \
-    libxml2 libffi-dev libyaml-dev \
-    libxslt-dev autoconf libc6-dev \
-    libreadline6-dev zlib1g-dev libcurl4-openssl-dev \
-    libtool >> "$log_file" 2>&1
+sudo $pm -y install wget curl build-essential clang bison openssl zlib1g libxslt1.1 libssl-dev libxslt1-dev libxml2 libffi-dev libyaml-dev libxslt-dev autoconf libc6-dev libreadline6-dev zlib1g-dev libcurl4-openssl-dev libtool |& tee $log_file
 echo "==> All dependencies installed successfully..."
 # As usual inform the user
 echo -e "\n=> Installing libraries that are needed for sqlite and mysql..."
-sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient-dev libpq-dev >> "$log_file" 2>&1
+sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient-dev libpq-dev |& tee $log_file
 echo "==> Done installing DB dependencies..."
 
 # Install git-core
 echo -e "\n=> Installing Git. The most important thing in our workflow..."
-sudo $pm -y install git-core >> "$log_file" 2>&1
+sudo $pm -y install git-core |& tee $log_file
 echo "==> Git is now installed in your machine..."
