@@ -2,9 +2,8 @@
 
 A simple bash script to take setup you machine to run Ruby on Rails the right way.
 
-### Note: This project is not production ready yet.
-
 ## Supported Platforms
+
 - Ubuntu
 - Mac OS X (Coming soon)
 
@@ -20,6 +19,8 @@ A simple bash script to take setup you machine to run Ruby on Rails the right wa
 You have a choice to install Ruby from source or from RVM.
 
 ## Usage
+
+`wget https://raw.githubusercontent.com/skcript/get-set-rails/master/get-set-rails.sh`
 
 ## TBD
 
