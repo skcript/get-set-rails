@@ -33,7 +33,7 @@ else
   pm="apt-get"
 fi
 
-echo -e "\Currently using $pm for package installation...\n"
+echo -e "\nCurrently using $pm for package installation...\n"
 
 # Install all the damn dependencies
 echo -e "\n=> Installing build tools and other dependencies..."
