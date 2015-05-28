@@ -33,7 +33,7 @@ else
   pm="apt-get"
 fi
 
-echo -e "\nCurrntly usin $pm for package installation...\n"
+echo -e "\Currently using $pm for package installation...\n"
 
 # Install all the damn dependencies
 echo -e "\n=> Installing build tools and other dependencies..."
@@ -44,14 +44,14 @@ sudo $pm -y install \
     libxml2 libffi-dev libyaml-dev \
     libxslt-dev autoconf libc6-dev \
     libreadline6-dev zlib1g-dev libcurl4-openssl-dev \
-    libtool >> $log_file 2>&1
+    libtool >> "$log_file" 2>&1
 echo "==> All dependencies installed successfully..."
 # As usual inform the user
 echo -e "\n=> Installing libraries that are needed for sqlite and mysql..."
-sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient-dev libpq-dev >> $log_file 2>&1
+sudo $pm -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient-dev libpq-dev >> "$log_file" 2>&1
 echo "==> Done installing DB dependencies..."
 
 # Install git-core
 echo -e "\n=> Installing Git. The most important thing in our workflow..."
-sudo $pm -y install git-core >> $log_file 2>&1
+sudo $pm -y install git-core >> "$log_file" 2>&1
 echo "==> Git is now installed in your machine..."
