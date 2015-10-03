@@ -37,6 +37,9 @@ echo -e "\nCurrently using $pm for package installation...\n"
 
 # Install all the damn dependencies
 echo -e "\n=> Installing build tools and other dependencies..."
+sudo $pm update |& tee $log_file
+# Install all the damn dependencies
+echo -e "\n=> Installing build tools and other dependencies..."
 sudo $pm -y install wget clang bison openssl zlib1g libxslt1.1 libxml2 libffi-dev libxslt-dev autoconf libc6-dev libreadline6-dev libtool curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties checkinstall imagemagick libjpeg-dev libpng-dev libtiff-dev libgif-dev libwebp-dev libimage-exiftool-perl unoconv atomicparsley libvips libmysqlclient-dev mysql-server nodejs npm libopus-dev |& tee $log_file
 echo "==> All dependencies installed successfully..."
 # As usual inform the user
