@@ -20,11 +20,11 @@
 shopt -s nocaseglob
 set -e
 
-ruby_version="2.1.5"
-ruby_version_string="2.1.5"
-ruby_source_url="http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz"
-ruby_source_tar_name="ruby-2.1.5.tar.gz"
-ruby_source_dir_name="ruby-2.1.5"
+ruby_version="2.3.3"
+ruby_version_string="2.3.3"
+ruby_source_url="http://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.gz"
+ruby_source_tar_name="ruby-2.3.3.tar.gz"
+ruby_source_dir_name="ruby-2.3.3"
 which_user=$(whoami)
 getsetrails_path=$(cd && pwd)/getsetrails
 log_file="$getsetrails_path/rails_install.log"
